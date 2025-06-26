@@ -1,0 +1,44 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="512" height="512" fill="#007AFF" rx="100"/>
+  
+  <!-- モザイクパターン -->
+  <g fill="#FFFFFF" opacity="0.9">
+    <!-- 大きなブロック -->
+    <rect x="80" y="80" width="80" height="80" rx="8"/>
+    <rect x="180" y="80" width="80" height="80" rx="8"/>
+    <rect x="280" y="80" width="80" height="80" rx="8"/>
+    
+    <rect x="80" y="180" width="80" height="80" rx="8"/>
+    <rect x="180" y="180" width="80" height="80" rx="8"/>
+    <rect x="280" y="180" width="80" height="80" rx="8"/>
+    
+    <rect x="80" y="280" width="80" height="80" rx="8"/>
+    <rect x="180" y="280" width="80" height="80" rx="8"/>
+    <rect x="280" y="280" width="80" height="80" rx="8"/>
+  </g>
+  
+  <!-- 小さなブロック（細かいモザイク表現） -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <rect x="380" y="80" width="40" height="40" rx="4"/>
+    <rect x="380" y="130" width="40" height="40" rx="4"/>
+    <rect x="380" y="180" width="40" height="40" rx="4"/>
+    <rect x="380" y="230" width="40" height="40" rx="4"/>
+    <rect x="380" y="280" width="40" height="40" rx="4"/>
+    <rect x="380" y="330" width="40" height="40" rx="4"/>
+    
+    <rect x="80" y="380" width="40" height="40" rx="4"/>
+    <rect x="130" y="380" width="40" height="40" rx="4"/>
+    <rect x="180" y="380" width="40" height="40" rx="4"/>
+    <rect x="230" y="380" width="40" height="40" rx="4"/>
+    <rect x="280" y="380" width="40" height="40" rx="4"/>
+    <rect x="330" y="380" width="40" height="40" rx="4"/>
+    <rect x="380" y="380" width="40" height="40" rx="4"/>
+  </g>
+  
+  <!-- ブラシアイコン -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <circle cx="420" cy="420" r="20"/>
+    <rect x="400" y="400" width="8" height="40" rx="4" transform="rotate(45 404 420)"/>
+  </g>
+</svg> 

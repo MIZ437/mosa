@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="モザイクツール">
+    <title>画像モザイク加工ツール</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>モザイクツール</h1>
+            <div class="header-controls">
+                <button id="undoBtn" class="control-btn" disabled>
+                    <span>↶</span>
+                </button>
+                <button id="redoBtn" class="control-btn" disabled>
+                    <span>↷</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="main-content">
+            <!-- 画像選択エリア -->
+            <div id="imageSelector" class="image-selector">
+                <div class="upload-area">
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                    <button id="selectImageBtn" class="select-btn">
+                        📷 画像を選択
+                    </button>
+                    <p class="upload-hint">JPEG, PNG, WebP対応 (最大50MB)</p>
+                </div>
+            </div>
+
+            <!-- キャンバスエリア -->
+            <div id="canvasContainer" class="canvas-container" style="display: none;">
+                <div class="canvas-wrapper">
+                    <canvas id="mainCanvas"></canvas>
+                    <canvas id="overlayCanvas"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <!-- ツールバー -->
+        <div id="toolbar" class="toolbar" style="display: none;">
+            <!-- モード切り替え -->
+            <div class="tool-group">
+                <button id="mosaicMode" class="mode-btn active">
+                    🔲 モザイク
+                </button>
+                <button id="eraserMode" class="mode-btn">
+                    🧽 消しゴム
+                </button>
+            </div>
+
+            <!-- モザイク設定 -->
+            <div class="tool-group">
+                <label for="mosaicSize">粒度:</label>
+                <input type="range" id="mosaicSize" min="1" max="100" value="10" class="slider">
+                <input type="number" id="mosaicSizeInput" min="1" max="100" value="10" class="size-input">
+                <span>px</span>
+            </div>
+
+            <!-- ブラシサイズ -->
+            <div class="tool-group">
+                <label for="brushSize">ブラシ:</label>
+                <input type="range" id="brushSize" min="5" max="100" value="20" class="slider">
+                <span id="brushSizeValue">20px</span>
+            </div>
+
+            <!-- アクションボタン -->
+            <div class="tool-group">
+                <button id="completeBtn" class="complete-btn">
+                    ✅ 完了
+                </button>
+            </div>
+        </div>
+
+        <!-- ローディング -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>処理中...</p>
+        </div>
+
+        <!-- トースト通知 -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

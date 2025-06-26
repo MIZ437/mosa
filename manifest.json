@@ -1,0 +1,28 @@
+{
+    "name": "画像モザイク加工ツール",
+    "short_name": "モザイクツール",
+    "description": "iPhoneで動作する画像モザイク加工ツール",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f5f7",
+    "theme_color": "#007aff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["photo", "utilities"],
+    "lang": "ja",
+    "scope": "/",
+    "prefer_related_applications": false
+} 
